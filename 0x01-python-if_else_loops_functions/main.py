@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-func = __import__('7-islower').islower
+func = __import__('8-uppercase').uppercase
 
-print(func('a'))
-print(func('z'))
-print(func('k'))
-print(func('K'))
+func("best")
+func("Best 99 peoPLE")
