@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-remove_char_at = __import__('12-fizzbuzz').fizzbuzz
+func = __import__('7-islower').islower
 
-remove_char_at()
-print("")
+print(func('a'))
+print(func('z'))
+print(func('k'))
+print(func('K'))
