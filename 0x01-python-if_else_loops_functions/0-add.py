@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-func = __import__('8-uppercase').uppercase
+from uppercase import uppercase as func
 
 func("best")
 func("Best 99 peoPLE")
