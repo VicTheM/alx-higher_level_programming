@@ -8,7 +8,7 @@ if __name__ == "__main__":
         print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         exit(1)
 
-    operators = ['+', '-', '*', '/']
+    operators = ['+', '-', "*", '/']
     operation = [cal.add, cal.sub, cal.mul, cal.div]
     if sys.argv[2] not in operators:
         print("Unknown operator. Available operators: +, -, *, /")
