@@ -2,8 +2,8 @@
 
 def check(tup):
     length = len(tup)
-	if length >= 2:
-		return tup
+    if length >= 2:
+        return tup
     if length == 1:
         return (tup[0], 0)
     else:
@@ -17,6 +17,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
     two = tuple_a[1] + tuple_b[1]
 
     return (one, two)
-
-
-
