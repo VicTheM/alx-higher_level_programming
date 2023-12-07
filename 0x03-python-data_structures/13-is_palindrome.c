@@ -11,29 +11,29 @@
  */
 int even_palindrome(listint_t *head, int **buf, unsigned int len)
 {
-        unsigned int c;
+	unsigned int c;
 
-        *buf = malloc((len / 2) * sizeof(int));
-        if (buf == NULL)
-                return (0);
-        for (c = 0; c < len / 2; c++)
-        {
-                *(*buf + c) = head->n;
-                head = head->next;
-        }
+	*buf = malloc((len / 2) * sizeof(int));
+	if (buf == NULL)
+		return (0);
+	for (c = 0; c < len / 2; c++)
+	{
+		*(*buf + c) = head->n;
+		head = head->next;
+	}
 
-        while (c > 0 && head != NULL)
-        {
-                c--;
-                if (head->n != *(*buf + c))
-                {
-                        free(*buf);
-                        return (0);
-                }
-                head = head->next;
-        }
-        free(*buf);
-        return (1);
+	while (c > 0 && head != NULL)
+	{
+		c--;
+		if (head->n != *(*buf + c))
+		{
+			free(*buf);
+			return (0);
+		}
+		head = head->next;
+	}
+	free(*buf);
+	return (1);
 
 }
 
@@ -49,31 +49,31 @@ int even_palindrome(listint_t *head, int **buf, unsigned int len)
  */
 int odd_palindrome(listint_t *head, int **buf, unsigned int len)
 {
-        unsigned int c;
+	unsigned int c;
 
-        *buf = malloc((len / 2) * sizeof(int));
-        if (*buf == NULL)
-                return (0);
+	*buf = malloc((len / 2) * sizeof(int));
+	if (*buf == NULL)
+		return (0);
 
-        for (c = 0; c < len / 2; c++)
-        {
-                *(*buf + c) = head->n;
-                head = head->next;
-        }
-        head = head->next;
+	for (c = 0; c < len / 2; c++)
+	{
+		*(*buf + c) = head->n;
+		head = head->next;
+	}
+	head = head->next;
 
-        while (c > 0 && head != NULL)
-        {
-                c--;
-                if (head->n != *(*buf + c))
-                {
-                        free(*buf);
-                        return (0);
-                }
-                head = head->next;
-        }
-        free(*buf);
-        return (1);
+	while (c > 0 && head != NULL)
+	{
+		c--;
+		if (head->n != *(*buf + c))
+		{
+			free(*buf);
+			return (0);
+		}
+		head = head->next;
+	}
+	free(*buf);
+	return (1);
 
 }
 
@@ -85,21 +85,21 @@ int odd_palindrome(listint_t *head, int **buf, unsigned int len)
  */
 int is_palindrome(listint_t **head)
 {
-        unsigned int len;
-        int *buf;
-        listint_t *first, *last;
+	unsigned int len;
+	int *buf;
+	listint_t *first, *last;
 
-        if (!(head || *head))
-                return (0);
-        first = last = *head;
-        if (first == NULL)
-                return (1);
+	if (!(head || *head))
+		return (0);
+	first = last = *head;
+	if (first == NULL)
+		return (1);
 
-        for (len = 1; last->next != NULL; last = last->next)
-                len++;
+	for (len = 1; last->next != NULL; last = last->next)
+		len++;
 
-        if (len % 2 != 0)
-                return (odd_palindrome(first, &buf, len));
-        else
-                return (even_palindrome(first, &buf, len));
+	if (len % 2 != 0)
+		return (odd_palindrome(first, &buf, len));
+	else
+		return (even_palindrome(first, &buf, len));
 }
