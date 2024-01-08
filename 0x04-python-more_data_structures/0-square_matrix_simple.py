@@ -5,6 +5,7 @@ def squ_them(arr=[]):
 
     return new_arr
 
+
 def square_matrix_simple(matrix=[]):
     """Squares all the element of a matrix"""
 
