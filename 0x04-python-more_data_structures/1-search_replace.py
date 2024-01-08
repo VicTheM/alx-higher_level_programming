@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# #!/usr/bin/python3
+#!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
     """Replaces @search with @replace in @my_list"""
