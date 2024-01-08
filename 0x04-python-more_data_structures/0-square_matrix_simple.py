@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# #!/usr/bin/bash
+#!/usr/bin/bash
 
 def squ_them(arr=[]):
     new_arr = list(map(lambda x: x**2, arr))
