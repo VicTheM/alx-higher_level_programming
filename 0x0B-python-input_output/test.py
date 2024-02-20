@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import sys
-
-for arg in sys.argv:
-    print(f"Hello, {arg}!")
+def my_function(*kids):
+    for arg in kids:
+        print(arg)
+my_function("me", "you")
+my_function()
