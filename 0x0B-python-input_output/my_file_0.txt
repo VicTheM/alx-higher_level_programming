@@ -1,0 +1,8 @@
+total 11
+drwxr-xr-x 1 victo 197609   0 Feb 20 13:37 ./
+drwxr-xr-x 1 victo 197609   0 Feb  6 19:27 ../
+-rwxr-xr-x 1 victo 197609 259 Feb 20 13:35 0-read_file.py*
+-rwxr-xr-x 1 victo 197609  99 Feb 20 13:35 0-test.py*
+-rw-r--r-- 1 victo 197609  41 Jan 14 22:21 README.md
+drwxr-xr-x 1 victo 197609   0 Feb 20 13:36 __pycache__/
+-rw-r--r-- 1 victo 197609   0 Feb 20 13:37 my_file_0.txt
