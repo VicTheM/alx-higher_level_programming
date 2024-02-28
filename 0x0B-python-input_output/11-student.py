@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ CLASSES / JSON """
 
+
 class Student:
 
     def __init__(self, first_name, last_name, age):
@@ -23,4 +24,3 @@ class Student:
         """Refreshes all instance variables from a dictionary"""
         for key, value in self.__dict__.items():
             self.__dict__[key] = json[key]
-

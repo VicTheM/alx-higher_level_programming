@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-JSON 
+JSON
 
 This script saves all the comand line arguments
 passed to it in json format in a json file

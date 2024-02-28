@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ TECHNICAL INTERVIEW PREP """
 
+
 def pascal_triangle(n):
     """
     Creates a pascal triangle using lists
@@ -19,8 +20,5 @@ def pascal_triangle(n):
             for idx, itm in enumerate(lists[row - 2]):
                 if idx + 1 < length:
                     lists[row - 1].append(itm + lists[row - 2][idx + 1])
-            # lists[row - 1].extend([(item + lists[row - 2][index + 1]) for index, item in enumerate(lists[row - 2][1:-1])])
             lists[row - 1].append(lists[row - 2][-1])
-
     return lists
-
