@@ -2,8 +2,6 @@
 """ Custom JSON Serializer """
 
 
-import json
-
 
 def class_to_json(obj):
     """
