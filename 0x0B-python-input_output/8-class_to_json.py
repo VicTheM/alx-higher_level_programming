@@ -13,5 +13,5 @@ def class_to_json(obj):
     NOTE: all attributes of obj must be
     inherently serializable
     """
-    
+
     return obj.__dict__
