@@ -1,21 +1,19 @@
 #!/usr/bin/python3
-"""
-JSON
+"""A script that adds all arguments to a Python list,
+    and then save them to a file."""
 
-This script saves all the comand line arguments
-passed to it in json format in a json file
-"""
 
 import sys
-save = __import__("5-save_to_json_file").save_to_json_file
-load = __import__("6-load_from_json_file").load_from_json_file
 
-filepath = "add_item.json"
 
-if len(sys.argv) > 1:
-    try:
-        new_list = load(filepath)
-        new_list.extend(sys.argv[1:])
-    except FileNotFoundError:
-        new_list = sys.argv[1:]
-    save(new_list, filepath)
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
+
+
+filename = "add_item.json"
+try:
+    items = load_from_json_file(filename)
+except FileNotFoundError:
+    items = []
+items.extend(sys.argv[1:])
+save_to_json_file(items, filename)
