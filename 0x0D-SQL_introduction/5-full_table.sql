@@ -1,3 +1,3 @@
 -- show full table
 
-SHOW table_size;
+SHOW first_table;
