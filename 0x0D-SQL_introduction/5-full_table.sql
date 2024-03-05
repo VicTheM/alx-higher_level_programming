@@ -1,3 +1,3 @@
 -- show full table
 
-SHOW first_table;
+SHOW TABLE first_table;
