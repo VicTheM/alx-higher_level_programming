@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ CLASSES / JSON """
 
+
 class Student:
 
     def __init__(self, first_name, last_name, age):
@@ -18,4 +19,3 @@ class Student:
                     attributes[key] = value
             return attributes
         return self.__dict__
-
