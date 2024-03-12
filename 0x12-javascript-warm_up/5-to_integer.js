@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /* converts string to integer */
 
 let input = parseInt(process.argv[2])
