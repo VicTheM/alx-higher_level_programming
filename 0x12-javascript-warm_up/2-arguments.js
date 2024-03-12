@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 // Reads command line argumemts
 
 const args = process.argv
