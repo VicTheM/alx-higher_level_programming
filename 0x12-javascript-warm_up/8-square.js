@@ -1,16 +1,17 @@
 #!/usr/bin/node
 /* Prints a square */
 
-let input = parseInt(process.argv[2])
-let output = ""
+const input = parseInt(process.argv[2])
+let output = ''
+let x
 
 if (Number.isInteger(input)) {
-	for (let x = 0; x < input; x++) {
-		output += 'X'
-	}
-	for (x = 0; x < input; x++) {
-		console.log(output)
-	}
+  for (x = 0; x < input; x++) {
+    output += 'X'
+  }
+  for (x = 0; x < input; x++) {
+    console.log(output)
+  }
 } else {
-	console.log('Missing size')
+  console.log('Missing size')
 }
