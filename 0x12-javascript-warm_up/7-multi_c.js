@@ -1,11 +1,12 @@
 #!/usr/bin/node
-/* receives control from cmd */
+// This script prints “C is fun” x times
 
-const input = parseInt(process.argv[2]);
-if (Number.isInteger(input)) {
-  for (let x = 0; x < input; x++) {
-    console.log('C if fun');
+const x = parseInt(process.argv[2]);
+
+if (x) {
+  for (let i = 0; i < x; i++) {
+    console.log('C is fun');
   }
 } else {
-  console.log('Missing number of occurences');
+  console.log('Missing number of occurrences');
 }
