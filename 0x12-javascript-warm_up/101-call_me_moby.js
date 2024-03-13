@@ -2,11 +2,11 @@
 /* Scopes - Bindings - Closure */
 
 const mine = function (x, theFunction) {
-  let c = x
+  let c = x;
   while (c > 0) {
-    theFunction()
-    c--
+    theFunction();
+    c--;
   }
-}
+};
 
-exports.callMeMoby = mine
+exports.callMeMoby = mine;
