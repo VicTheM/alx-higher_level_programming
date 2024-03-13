@@ -14,10 +14,10 @@ class Rectangle {
     let x;
     let output = '';
   	for (x = 0; x < this.width; x++) {
-    	  output += 'X';
+      output += 'X';
   	}
- 	for (x = 0; x < this.height; x++) {
-    	  console.log(output)
+    for (x = 0; x < this.height; x++) {
+      console.log(output);
     }
   }
 }
