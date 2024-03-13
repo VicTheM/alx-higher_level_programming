@@ -1,28 +1,20 @@
 #!/usr/bin/node
-/* Defines a class */
+// This script creates a class Square that defines a square and inherits from Rectangle
 
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
+
 class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (k) {
-	  let x;
-	  let out = '';
-	  let letter;
-	  if (k) {
-      letter = k;
-	  } else {
-      letter = 'X';
-	  }
-
-	  for (x = 0; x < this.width; x++) {
-      out += letter;
-	  }
-	  for (x = 0; x < this.height; x++) {
-		  console.log(out);
-	  }
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++) {
+      let breath = '';
+      for (let j = 0; j < this.width; j++) {
+        breath += c;
+      }
+      console.log(breath);
+    }
   }
 }
 
