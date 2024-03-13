@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /* Mess with scopes! */
 
 myVar = 333;
