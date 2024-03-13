@@ -4,28 +4,28 @@
 class Rectangle {
   constructor (w, h) {
     if (Number.isInteger(w) && w > 0 && Number.isInteger(h) && h > 0) {
-      this.width = w
-      this.height = h
+      this.width = w;
+      this.height = h;
     }
   }
 
   // Public instance method
   print () {
-    let x
-    let output = ''
+    let x;
+    let output = '';
   	for (x = 0; x < this.width; x++) {
-    	  output += 'X'
+      output += 'X';
   	}
- 	for (x = 0; x < this.height; x++) {
-    	  console.log(output)
+    for (x = 0; x < this.height; x++) {
+      console.log(output);
     }
   }
 
   // Another public instance method
   rotate () {
-    const tmp = this.width
-    this.width = this.height
-    this.height = tmp
+    const tmp = this.width;
+    this.width = this.height;
+    this.height = tmp;
   }
 
   // Yet another public method
@@ -35,4 +35,4 @@ class Rectangle {
   }
 }
 
-module.exports = Rectangle
+module.exports = Rectangle;
