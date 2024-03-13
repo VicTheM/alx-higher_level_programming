@@ -30,8 +30,8 @@ class Rectangle {
 
   // Yet another public method
   double () {
-    this.width *= 2
-    this.height *= 2
+    this.width *= 2;
+    this.height *= 2;
   }
 }
 
