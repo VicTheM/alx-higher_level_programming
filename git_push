@@ -1,0 +1,13 @@
+# This script receives a commit message and pushes the changes to a remote branch
+
+name="VicTheM"
+password="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"
+commit_message=$1
+
+git add .
+git commit -m "$commit_message"
+#git push
+#$name
+#$password
+echo "commit message: $commit_message"
+echo "Successfully pushed your code..."
