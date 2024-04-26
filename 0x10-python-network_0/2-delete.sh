@@ -1,6 +1,4 @@
 #!/bin/bash
-# This script sends GET request to a server and displays the body of a 200 response
-
-# get header + body
-curl -X DELETE $1
+# This script sends a DELETE request to the URL passed as the first argument and displays the body of the response
+curl -s -X DELETE "$1"
 
