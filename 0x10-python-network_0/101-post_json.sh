@@ -1,3 +1,3 @@
 #!/bin/bash
 # send data and display body of response
-curl -X POST --data @"$2" --header 'ContentType: application/json' $1
+curl -s -X POST -H "Content-Type: application/json" -d @"$2" "$1"
