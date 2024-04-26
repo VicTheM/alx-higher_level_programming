@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # This script sends GET
 
 # send data and display body of response
