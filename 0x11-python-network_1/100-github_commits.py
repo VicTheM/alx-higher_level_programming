@@ -22,6 +22,9 @@ if __name__ == "__main__":
             }
     req = requests.get(url, headers=headers)
 
-    data = req.json()
-    for i in range(0, 10):
-        print("{}: {}".format(data[i]["sha"], data[i]["commit"]["author"]["name"]))
+    line_no = 1
+    for data in req.json():
+        print("{}: {}".format(data["sha"], data["commit"]["author"]["name"]))
+        if line_no == 10:
+            break
+        line_no += 1
