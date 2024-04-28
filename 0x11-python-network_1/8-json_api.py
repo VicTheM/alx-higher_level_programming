@@ -18,9 +18,10 @@ if __name__ == '__main__':
     req = requsts.post(url, data=payload)
 
     try:
-        if req.json == {}:
-            print ("No result")
+        json = response.json()
+        if json == {}:
+            print("No result")
         else:
-            print("[{}] {}".format(req.json()["id"], req.json["name"]))
+            print("[{}] {}".format(json["id"], json["name"]))
     except ValueError:
         print("Not a valid JSON")
