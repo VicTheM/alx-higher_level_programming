@@ -21,8 +21,9 @@ if __name__ == "__main__":
             "repo": repo
             }
     req = requests.get(url, headers=headers)
-
     line_no = 1
+
+    # Iterate through the list
     for data in req.json():
         print("{}: {}".format(data["sha"], data["commit"]["author"]["name"]))
         if line_no == 10:

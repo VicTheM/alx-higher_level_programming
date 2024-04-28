@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-'''
+"""
 This is a supper efficient script that contains a function
-to determine a max integer from a list of unsorted integers
-'''
+to determine a peak integer from a list of unsorted integers
+"""
 
 def find_peak(list_of_integers):
-    ''' Finds the peak value of an unsorted list of integers.
-    If the max value occur more than once, juts one instance
-    is returned '''
+    """ Finds the peak value of an unsorted list of integers.
+    A peak is a number that is > than its neigbours
+    If more than one peak occurs, we return the rightmost one """
 
-    # The complexity of this algo is O(n)
-    # But will be improved to O(log(n)) later
+    # Time complexity O(log(n))
 
     n = len(list_of_integers)
     mid = n // 2
