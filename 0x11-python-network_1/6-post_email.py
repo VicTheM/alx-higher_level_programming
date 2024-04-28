@@ -10,4 +10,4 @@ if __name__ == '__main__':
     values = {"email": email}
 
     res = requets.post(url, data=values)
-        print(res.text)
+    print(res.text)
