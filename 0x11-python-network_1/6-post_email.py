@@ -12,4 +12,5 @@ if __name__ == "__main__":
     }
 
     res = requets.post(url, data=values)
-    print(res.text)
+    # print(res.text)
+    print("Your email is: {}".format(email))
