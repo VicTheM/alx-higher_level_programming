@@ -7,15 +7,12 @@ required data in the response"""
 import requests
 import sys
 
-if __name__ == '__main__':
-    url = 'http://0.0.0.0:5000/search_user'
-    if len(sys.argv >= 2):
-        sch_str = sys.argv[1]
-    else:
-        sch_str = ""
-
-    payload = {"q": sch_str}
-    req = requsts.post(url, data=payload)
+if __name__ == "__main__":
+    url = "http://0.0.0.0:5000/search_user"
+    data = {
+            "q": "" if len(sys.argv) == 1 else sys.argv[1]
+            }
+    response = requests.post(url, data=data)
 
     try:
         json = response.json()
