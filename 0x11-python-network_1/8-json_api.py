@@ -14,7 +14,7 @@ if __name__ == '__main__':
     else:
         sch_str = ""
 
-    payload = {'q': sch_str}
+    payload = {"q": sch_str}
     req = requsts.post(url, data=payload)
 
     try:
