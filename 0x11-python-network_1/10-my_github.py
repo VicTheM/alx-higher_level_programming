@@ -19,7 +19,7 @@ if __name__ == "__main__":
             "Authorization": "Bearer " + pat
             }
     req = requests.get(url, headers=headers)
-    
+
     if "id" in req.json():
         user_id = req.json()["id"]
         print(user_id)
