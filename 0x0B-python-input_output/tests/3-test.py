@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-to_json_string = __import__('3-to_json_string').to_json_string
+""" JSON """
+
+
+import json
+
+
+def to_json_string(my_obj):
+    """
+    Returns JSON string representation of
+    a serializable object
+    """
+
+    return json.dumps(my_obj)
+
 
 my_list = [1, 2, 3]
 s_my_list = to_json_string(my_list)

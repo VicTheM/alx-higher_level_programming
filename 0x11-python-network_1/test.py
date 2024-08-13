@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Testing dictionary stuff"""
+"""Sends a request to the command line url specified and prints
+the 'X-Request-ID' header attribute."""
 
-mydict = {"name": 'Victory', "age": 22}
+import sys
+import requests
 
-if "name" in mydict:
-    print("found name")
-if 'Victory' in mydict:
-    print("found value")
-
-# The result of my test is that the 'if "x" in dict'
-# searches for only keeys in dict and not values
+if __name__ == '__main__':
+    url = sys.argv[1]
+    res = requests.get(url)
+    print(res.headers['X-Request-Id'])
