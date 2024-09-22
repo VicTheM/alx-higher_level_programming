@@ -1,0 +1,55 @@
+Testing the class BaseGeometry
+
+..Checking documentation
+----------------------------
+>>> print(__import__('7-base_geometry').__doc__)
+Defines a BaseGeometry class
+
+>>> print(__import__('7-base_geometry').BaseGeometry.__doc__)
+Reperesents a geometric shape
+
+>>> print( __import__('7-base_geometry').BaseGeometry.area.__doc__)
+Not yet implemented
+
+>>> print(__import__('7-base_geometry').BaseGeometry.integer_validator.__doc__)
+Validates if value is an integer greater than 0
+	Args:
+	    name (str): The name of the paremeter
+	    value (int): The value of the parameter
+<BLANKLINE>
+	Raises:
+	    TypeError: If `value` is not integer
+	    ValueError: If `value` is less than or equal to zero
+<BLANKLINE>
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+
+..The `area` method
+-----------------------
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+
+..The `integer_validator` method
+----------------------------------
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+
+>>> bg.integer_validator("float", 1.5)
+Traceback (most recent call last):
+TypeError: float must be an integer
