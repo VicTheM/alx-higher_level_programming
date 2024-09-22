@@ -1,7 +1,1 @@
-#Topics covered
-- lambda functions
-- map()
-- filter()
-- reduce()
-- Dictionaries
-- List comprehension
+0x04-python-more_data_structures

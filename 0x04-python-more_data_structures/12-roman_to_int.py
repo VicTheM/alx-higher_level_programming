@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def roman_to_int(roman_string):
     roman = {
             'I': 1,
@@ -11,9 +10,8 @@ def roman_to_int(roman_string):
             'M': 1000
             }
     num = 0
-    if (type(roman_string) is not str) or (type(roman_string) is None):
+    if not isinstance(roman_string, str) or not roman_string:
         return 0
-
     for i, c in enumerate(roman_string):
         if roman[c]:
             num += roman[c]
